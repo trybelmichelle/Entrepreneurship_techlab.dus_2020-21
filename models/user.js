@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const byrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.statics.findandValidate = async function (username, password) {
     const foundUser = await this.findOne({username});
-    const isValid = await bcrybt.compare(password, foundUser.password);
+    const isValid = await bcrypt.compare(password, foundUser.password);
     return isValid ? foundUser: false;
 }
 userSchema.pre('save', async function(next){

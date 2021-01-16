@@ -27,7 +27,7 @@ const requireLogin = (req, res, next) => {
     next();
 }
 app.get('/', (req, res) => {
-    res.render('THIS IS THE HOME PAGE')
+    res.render('homepage')
 })
 
 app.get('/register', (req, res) => {
@@ -64,7 +64,7 @@ app.post('/logout', (req, res) => {
 })
 
 app.get('/secret', requireLogin, (req, res) => {
-    res.render('secret')
+    res.send('secret')
 })
 app.get('/topsecret', requireLogin, (req, res) => {
     res.send("TOP SECRET!!")
