@@ -17,6 +17,8 @@ mongoose.connect('mongodb://localhost:27017/authentication', {useNewUrlParser: t
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+app.use(express.static('public'))
+
 app.use(express.urlencoded({extended: true}));
 app.use(session({secret:'notagoodsecret'}))
 
@@ -28,6 +30,42 @@ const requireLogin = (req, res, next) => {
 }
 app.get('/', (req, res) => {
     res.render('homepage')
+})
+
+app.get('/schueler', (req, res) => {
+    res.render('schueler')
+})
+
+app.get('/schulen', (req, res) => {
+    res.render('schulen')
+})
+
+app.get('/ueber', (req, res) => {
+    res.render('ueber', {title: "ueber"})
+})
+
+app.get('/kontakt', (req, res) => {
+    res.render('kontakt')
+})
+
+app.get('/impressum', (req, res) => {
+    res.render('impressum')
+})
+
+app.get('/datenschutz', (req, res) => {
+    res.render('datenschutz')
+})
+
+app.get('/dashboard', (req, res) => {
+    res.render('dashboard')
+})
+
+app.get('/downloads', (req, res) => {
+    res.render('downloads')
+})
+
+app.get('/lernpfad', (req, res) => {
+    res.render('lernpfad')
 })
 
 app.get('/register', (req, res) => {

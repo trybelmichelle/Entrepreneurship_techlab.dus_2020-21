@@ -7,47 +7,8 @@ html, body {
     padding: 0;
 }
 
-#steuerung ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow:hidden;
-    background-color: tan;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-#steuerung li {
-    float: left;
-  }
-
-#steuerung li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#steuerung li a:hover {
-    background-color: thistle;
-}
-
-#steuerung button {
-    float:right;
-}
-
-#steuerung button a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
 #kopfbereich {
-    background:url(startseite.jpg) no-repeat left top;
+    background:url(/bilder/startseite.jpg) no-repeat left top;
     height: 400px;
 }
 
@@ -58,10 +19,6 @@ font-size: 4em;
 padding: 1.5em 0 0 1em;
 }
 
-
-#schatten {
-    background-color: gray;
-}
 #inhalt {
     background-color: cornsilk;
 }
