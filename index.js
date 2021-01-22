@@ -66,9 +66,9 @@ app.use(express.static('assets'));
 //     }
 //     next();
 // }
-// app.get('/', (req, res) => {
-//     res.render('homepage')
-// })
+app.get('/', (req, res) => {
+    res.render('homepage')
+})
 
 app.get('/schueler', (req, res) => {
     res.render('schueler')
