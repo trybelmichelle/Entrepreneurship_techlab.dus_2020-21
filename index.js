@@ -10,6 +10,13 @@ const User = require('./models/user');
 
 const userRoutes = require('./routes/users');
 
+const isLoggedIn = (req, res, next) => {
+    if (!req.isAuthenticated()) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
 const sessionConfig = {
     name: 'session',
     secret: 'thisisnotagoodsecret',
@@ -93,7 +100,11 @@ app.get('/downloads', (req, res) => {
     res.render('downloads')
 })
 
-app.get('/lernpfad', (req, res) => {
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
+app.get('/lernpfad', isLoggedIn, (req, res) => {
     res.render('lernpfad')
 })
 
@@ -108,9 +119,7 @@ app.post('/register', async (req, res) => {
     res.redirect('/')
 })
 
-app.get('/login', (req, res) => {
-    res.render('login')
-})
+
 
 // app.post('/login', async (req, res) => {
 //     const { username, password } = req.body;
