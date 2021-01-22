@@ -1,12 +1,31 @@
-html, body {
-    font: 100% Arial, Helvetica, sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: sans-serif;
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: #fff !important;
+    font-weight: 400;
+}
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+
+/* 
 #kopfbereich {
     background:url(/bilder/startseite.jpg) no-repeat left top;
     height: 400px;
@@ -48,4 +67,4 @@ padding: 1.5em 0 0 1em;
 }
 
 #footer li a:hover {
-    background-color: thistle;
+    background-color: thistle; */

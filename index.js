@@ -66,6 +66,7 @@ app.use(express.static('assets'));
 //     }
 //     next();
 // }
+
 app.get('/', (req, res) => {
     res.render('homepage')
 })
