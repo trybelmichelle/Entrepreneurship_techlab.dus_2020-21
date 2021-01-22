@@ -57,6 +57,8 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use('/', userRoutes);
 
+app.use(express.static('assets'));
+
 
 // const requireLogin = (req, res, next) => {
 //     if (!req.session.user_id) {
