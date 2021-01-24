@@ -7,13 +7,32 @@ body {
     font-family: sans-serif;
 }
 
+.navbar {
+    background-color: white !important;
+}
+
 .navbar-nav li {
     padding: 0 10px;
 }
 
 .navbar-nav li a {
-    color: #000000 !important;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.navbar-nav li a:hover {
+    color: #a8a5cb !important;
+}
+
+navbar-toggler {
+    
+}
+
+.jumbotron {
+    padding-left: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    color: white;
 }
 
 
