@@ -1,9 +1,10 @@
 <section id="nav-bar">
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="/Bilder/Logo.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -21,10 +22,21 @@
             <a class="nav-link" href="/ueber">Über uns</a>
           </li>
         </ul>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <a class="btn btn-outline-secondary me-md-2" type="button" href="/login">Anmelden</a>
-          <a class="btn btn-primary" type="button" href="/register" style="background-color: #a8a5cb; border-color: gray;">Registrieren</a>
-        </div>
+
+        <% const loggedIn=(req, res)=> { %>
+          <% if (req.isAuthenticated()) { %>
+            <% return %>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a class="btn btn-outline-secondary me-md-2" type="button" href="/logout">Abmelden</a>
+              </div>
+              <%} else %>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <a class="btn btn-outline-secondary me-md-2" type="button" href="/login">Anmelden</a>
+                  <a class="btn btn-primary" type="button" href="/register"
+                    style="background-color: #a8a5cb; border-color: gray;">Registrieren</a>
+                </div>
+                <% } %>
       </div>
     </div>
   </nav>
