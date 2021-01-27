@@ -1,0 +1,41 @@
+<%- include("partials/head")%>
+
+<%- include("partials/nav")%>
+
+<div style="margin-top: 55px;"></div>
+
+<%- include("partials/jumbotron")%>
+
+<section id=ueber>
+
+<div class="container my-5">
+    <div class="mb-4 my-lg-auto">
+        
+        <h2 class="text-dark font-weight-bold mb-3">Kontakt</h2>
+        <div class="row">
+            <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-2"></div>
+            <div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8">
+            <form id="contact-form" method="post" action="contact.php" role="form">
+            <p class="lead">Kontaktieren Sie uns gerne bei Fragen, Anmerkungen oder Problemen!</p>
+            <div class="form-group">
+              <label for="name">Vor- und Zuname</label>
+              <input class="form-control" name="name" type="text" id="name" placeholder="Tragen Sie hier bitte Ihren Vor- und Zunamen ein">
+            </div>
+            <div class="form-group">
+              <label for="email">E-Mail Adresse</label>
+              <input type="email" name="email" class="form-control" id="email" placeholder="Tragen Sie hier bitte Ihre E-Mail Adresse ein">
+             </div>
+             <div class="form-group">
+               <label for="message">Nachricht</label>
+               <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+             </div>
+             <button type="button" class="btn btn-light">Senden</button>
+             </form>
+          </div>
+          <div class="col-1 col-sm-1 col-md-2 col-lg-2 col-xl-2"></div>
+          </div>
+    </div>
+</div>   
+
+</section>
+<%- include("partials/footer")%>
