@@ -23,20 +23,19 @@
           </li>
         </ul>
 
-        <% const loggedIn=(req, res)=> { %>
-          <% if (req.isAuthenticated()) { %>
-            <% return %>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a class="btn btn-outline-secondary me-md-2" type="button" href="/logout">Abmelden</a>
-              </div>
-              <%} else %>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a class="btn btn-outline-secondary me-md-2" type="button" href="/login">Anmelden</a>
+          <a class="btn btn-primary" type="button" href="/register"
+            style="background-color: #a8a5cb; border-color: gray;">Registrieren</a>
+        </div>
 
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <a class="btn btn-outline-secondary me-md-2" type="button" href="/login">Anmelden</a>
-                  <a class="btn btn-primary" type="button" href="/register"
-                    style="background-color: #a8a5cb; border-color: gray;">Registrieren</a>
-                </div>
-                <% } %>
+
+        <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a class="btn btn-outline-secondary me-md-2" type="button" href="/login">Anmelden</a>
+          <a class="btn btn-primary" type="button" href="/register"
+            style="background-color: #a8a5cb; border-color: gray;">Registrieren</a>
+        </div> -->
+
       </div>
     </div>
   </nav>

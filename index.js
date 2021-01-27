@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 
+const ejs = require('ejs');
+
+
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
@@ -152,3 +155,20 @@ app.post('/logout', (req, res) => {
 app.listen(8080, () => {
     console.log("SERVING YOUR APP!")
 })
+
+
+
+
+// <% const isLoggedIn = (req, res) => { %>
+//     <% if (req.isAuthenticated() = true) { %>
+//       <% return %>
+//         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+//           <a class="btn btn-outline-secondary me-md-2" type="button" href="/logout">Abmelden</a>
+//         </div>
+//         <%} else %>
+//           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+//             <a class="btn btn-outline-secondary me-md-2" type="button" href="/login">Anmelden</a>
+//             <a class="btn btn-primary" type="button" href="/register"
+//               style="background-color: #a8a5cb; border-color: gray;">Registrieren</a>
+//           </div>
+//           <% } %>
