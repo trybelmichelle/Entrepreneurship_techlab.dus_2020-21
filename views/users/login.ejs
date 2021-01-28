@@ -1,26 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("../partials/head")%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
+<%- include("../partials/nav")%>
 
-<body>
-    <h1>Login!</h1>
+<div style="margin-top: 55px;"></div>
+
+<%- include("../partials/jumbotron")%>
+
+<div style="margin-bottom: 55px;"></div>
+
+<div class="container">
+        <div class="row">
+        <div class="col-sm">
+
+    <h2>Loggen Sie sich jetzt ein!</h2>
     <form action="/login" method="POST">
         <div>
-            <label for="username">Enter Username</label>
-            <input type="text" name="username" id="username" placeholder="username">
+            <p>
+            <label for="username">Nutzername</label>
+            <input type="text" name="username" id="username" placeholder="Nutzername">
+        </p>
         </div>
         <div>
-            <label for="password">Enter Password</label>
-            <input type="password" name="password" id="password" placeholder="password">
+            <p>
+            <label for="password">Passwort</label>
+            <input type="password" name="password" id="password" placeholder="Passwort">
+        </p>
         </div>
-        <button>Login</button>
+        <button type="button" class="btn btn-light">Light</button>
     </form>
+        </div>
+    </div>
+</div>
 
-</body>
+<div style="margin-top: 55px;"></div>
+    <%- include("../partials/footer")%>
 
-</html>

@@ -1,30 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("../partials/head")%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
+<%- include("../partials/nav")%>
 
-<body>
-    <h1>SIGN UP!</h1>
-    <form action="/register" method="POST">
-        <div>
-            <label for="username">Enter Username</label>
-            <input type="text" name="username" id="username" placeholder="username" required>
-        </div>
-        <div>
-            <label for="email">Enter email</label>
-            <input type="text" name="email" id="email" placeholder="email" required>
-        </div>
-        <div>
-            <label for="password">Enter Password</label>
-            <input type="password" name="password" id="password" placeholder="password" required>
-        </div>
-        <button>Sign up</button>
-    </form>
+<div style="margin-top: 55px;"></div>
 
-</body>
+<%- include("../partials/jumbotron")%>
 
-</html>
+<div style="margin-bottom: 55px;"></div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h2 class="text-dark font-weight-bold mb-3">Registriere dich jetzt!</h2>
+        <form action="/register" method="POST">
+            <div>
+                <p>
+                <label for="FirstName">Vorname</label>
+                <input type="text" name="FirstName" id="Firstname" placeholder="Vorname" required>
+                </p>
+            </div>
+    
+            <div>
+                <p>
+                <label for="LastName">Nachname</label>
+                <input type="text" name="LastName" id="LastName" placeholder="Nachname" required>
+                </p>
+            </div>
+    
+            <div>
+                <p>
+                <label for="SchoolName">Institution</label>
+                <input type="text" name="LastName" id="SchoolName" placeholder="Name der Institution" required>
+                </p>
+            </div>
+    
+            <div>
+                <p>
+                <label for="NumberOfStudents">Anzahl der Teilnehmer</label>
+                <input type="number" name="" id="SchoolName" placeholder="Anzahl der Teilnehmer" required>
+                </p>
+            </div>
+    
+            <div>
+                <p>
+                <label for="username">Nutzername</label>
+                <input type="text" name="username" id="username" placeholder="Nutzername" required>
+                </p>
+            </div>
+            <div>
+                <p>
+                <label for="email">E-Mail</label>
+                <input type="text" name="email" id="email" placeholder="E-Mail" required>
+                </p>
+            </div>
+            <div>
+                <p>
+                <label for="password">Passwort</label>
+                <input type="password" name="password" id="password" placeholder="Passwort" required>
+            </p>
+            </div>
+            <button type="button" class="btn btn-light" >Light</button>
+        </form>
+      </div>
+     
+
+      </div>
+
+      <div class="col-sm">
+        
+      </div>
+      <div class="col-sm">
+
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 55px;"></div>
+
+
+    <%- include("../partials/footer")%>
