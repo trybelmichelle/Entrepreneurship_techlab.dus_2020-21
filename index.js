@@ -34,7 +34,7 @@ const sessionConfig = {
     }
 }
 
-mongoose.connect('mongodb://localhost:27017/authentication', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://jungevisionaere:jungevisionaere1!@cluster0.nzz7s.mongodb.net/Cluster0?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!")
     })
