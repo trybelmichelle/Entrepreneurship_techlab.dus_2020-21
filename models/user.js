@@ -7,10 +7,37 @@ const Schema = mongoose.Schema;
 const UserSchema = new mongoose.Schema({
     email: {
         type: String,
+        required: [true, 'Email cannot be blank'],
+        unique: true
+    },
+    username: {
+        type: String,
         required: [true, 'Username cannot be blank'],
+        unique: true
+    },
+    firstname: {
+        type: String,
+        required: [true, 'First name cannot be blank'],
+        unique: true
+    },
+    lastname: {
+        type: String,
+        required: [true, 'Last name cannot be blank'],
+        unique: true
+    },
+    schoolname: {
+        type: String,
+        required: [true, 'School name cannot be blank'],
+        unique: true
+    },
+    numberofstudents: {
+        type: String,
+        required: [true, 'Number of students cannot be blank'],
         unique: true
     }
 })
+
+
 
 // userSchema.statics.findandValidate = async function (username, password) {
 //     const foundUser = await this.findOne({ username });

@@ -12,8 +12,8 @@
     <div class="row">
       <div class="col-sm">
         <h2 class="text-dark font-weight-bold mb-3">Registriere dich jetzt!</h2>
-        <form class="row g-3">
-        <form action="/register" method="POST">
+        <div>
+        <form action="/register" method="POST" class="row g-3">
             <div class="col-md-6">
       <label for="username" class="form-label">Nutzername</label>
       <input type="text" name="username" id="username" class="form-control" placeholder="Nutzername" required>
@@ -43,11 +43,11 @@
       <input type="number" name="numberofstudents" id="numberofstudents" class="form-control" placeholder="Anzahl der Teilnehmer" required>
     </div>
     <div>
-    <button class="btn btn-primary" type="button" href="/homepage"
+    <button class="btn btn-primary" type="submit"
             style="background-color: #a8a5cb; border-color: gray;">Absenden</button>
         </div>
             </form>
-                </form>
+          </div>
             </div>
         </div>
     </div>

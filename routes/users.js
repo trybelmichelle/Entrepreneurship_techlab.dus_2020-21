@@ -9,8 +9,9 @@ router.get('/register', (req, res) => {
 })
 
 router.post('/register', async (req, res) => {
-    const { email, username, password } = req.body;
-    const user = new User({ email, username });
+    console.log(req.body)
+    const { email, username, password, firstname, lastname, schoolname, numberofstudents } = req.body;
+    const user = new User({ email, username, firstname, lastname, schoolname, numberofstudents });
     const registeredUser = await User.register(user, password);
     res.redirect('/')
 })
