@@ -27,6 +27,11 @@ navbar-toggler {
     
 }
 
+.navbar-brand img {
+    width: 1.5em;
+    margin-left: 20px;
+}
+
 .jumbotron {
     padding-left: 0px;
     padding-top: 3px;
