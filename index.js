@@ -6,6 +6,7 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const ejs = require('ejs');
+const PORT = process.env.PORT || 5000;
 
 
 const passport = require('passport');
@@ -162,7 +163,7 @@ app.post('/logout', (req, res) => {
 //     res.send("TOP SECRET!!")
 // })
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
     console.log("SERVING YOUR APP!")
 })
 
