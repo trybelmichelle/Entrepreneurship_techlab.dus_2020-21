@@ -3,7 +3,8 @@ const app = express();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
-
+const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
 const ejs = require('ejs');
 
 
@@ -49,13 +50,22 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 app.use(session(sessionConfig))
 
+app.use(cookieParser());
+app.use(session({ secret: "secret" }));
+
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(flash());
+// app.use(app.router);
 
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// passport.use(new LocalStrategy({
+//     passReqToCallback: true
+// }, function (req, username, password, done) {}));
 
 
 app.use('/', userRoutes);
