@@ -20,10 +20,8 @@ router.get('/login', (req, res) => {
     res.render('users/login');
 })
 
-router.post('/login', passport.authenticate('local', { failureFlash: false, failureRedirect: '/' }), (req, res) => {
-    console.log('Hallo');
-    res.redirect('/lernpfad')
-})
+router.post('/login', passport.authenticate('local', { successRedirect: '/lernpfad', failureRedirect: '/login' }))
+
 
 router.get('/logout', (req, res) => {
     req.logout();
